@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Split-Keyboard-with-Trackball
 
 Its a split keyboard custom designed for most effective use ( for me ) with an integrated joystick ( to be used as cursor ) , maximizing productivity and ergonomics
@@ -38,3 +39,7 @@ For firmware , i will be using ZMK the files used for them are in the folder i w
 # BOM 
 You can check the BOM.csv
 
+=======
+# Split-Keyboard-with-Joystick
+Its a split keyboard custom designed for most effective use ( for me ) with an integrated trackball , maximizing productivity and ergonomics
+>>>>>>> dc1a261e3a570fafe7e5abbc6dd37232b2bf2b3a
