@@ -1,0 +1,5 @@
+config SHIELD_SHADOW_SPT_LEFT
+    def_bool $(shields_list_contains,SHADOW_SPT_left)
+
+config SHIELD_SHADOW_SPT_RIGHT
+    def_bool $(shields_list_contains,SHADOW_SPT_right)

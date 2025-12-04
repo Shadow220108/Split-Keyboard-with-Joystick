@@ -1,0 +1,58 @@
+/* SHADOW_SPT_right.overlay */
+#include "SHADOW_SPT.dtsi"
+#include <dt-bindings/led/led.h>
+
+/* 1. Define the Shift Register (74HC165) via SPI */
+&xiao_spi {
+    status = "okay";
+    cs-gpios = <&xiao_d 4 GPIO_ACTIVE_LOW>; /* LOAD Pin */
+    
+    shift_reg: 74hc165@0 {
+        compatible = "zmk,gpio-spi-595";
+        reg = <0>;
+        spi-max-frequency = <100000>;
+        label = "SHIFT_REG";
+        #gpio-cells = <2>;
+        gpio-controller;
+        ngpios = <8>;
+    };
+};
+
+/* 2. Define the Matrix using the Shift Register for Columns */
+&kscan0 {
+    compatible = "zmk,kscan-gpio-matrix";
+    diode-direction = "col2row";
+
+    /* Rows are Direct XIAO Pins */
+    row-gpios
+        = <&xiao_d 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+
+    /* Columns are Virtual Pins on the Shift Register */
+    col-gpios
+        = <&shift_reg 0 GPIO_ACTIVE_HIGH>
+        , <&shift_reg 1 GPIO_ACTIVE_HIGH>
+        , <&shift_reg 2 GPIO_ACTIVE_HIGH>
+        , <&shift_reg 3 GPIO_ACTIVE_HIGH>
+        , <&shift_reg 4 GPIO_ACTIVE_HIGH>
+        , <&shift_reg 5 GPIO_ACTIVE_HIGH>
+        , <&shift_reg 6 GPIO_ACTIVE_HIGH>;
+};
+
+/* 3. The Joystick (Analog Input) */
+/ {
+    joystick_input {
+        compatible = "zmk,input-analog-axis";
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        /* Pins D0 and D1 are Analog A0 and A1 */
+        io-channels = <&adc 0>, <&adc 1>; 
+        deadzone = <100>;
+    };
+};
+
+&adc {
+    status = "okay";
+};
