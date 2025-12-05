@@ -1,11 +1,11 @@
 
 # Split-Keyboard-with-Trackball
 
-Its a split keyboard custom designed for most effective use ( for me ) with an integrated joystick ( to be used as cursor ) , maximizing productivity and ergonomics
+Its a split keyboard custom designed for most effective use ( for me ) with an integrated joystick ( to be used as cursor) , maximizing productivity and ergonomics
 
 # HERE IS THE DESIGN OF SPLIT KEYBOARD
 
-[CAD](CAD/Split\_Keyboard.png)
+![CAD](CAD/Split\_Keyboard.png)
 
 
 
