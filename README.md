@@ -38,4 +38,4 @@ Its a split keyboard custom designed for most effective use ( for me ) with an i
 For firmware , i will be using ZMK the files used for them are in the folder i will be flashing it after the build
 
 # BOM 
-You can check the BOM.csv
+You can check the BOM.csv , these are the cheapest ones i could find which are local in my country , there were some options available but they were sketchy websites which were too good to be true.
