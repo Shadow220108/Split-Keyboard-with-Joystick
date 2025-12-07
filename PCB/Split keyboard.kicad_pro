@@ -60,19 +60,11 @@
       ],
       "drc_exclusions": [
         [
-          "unconnected_items|132673534|113646000|F.Cu|4|0d02fca0-2430-4911-90d8-849f5664486c|0d02fca0-2430-4911-90d8-849f5664486c",
-          "split keyboard"
-        ],
-        [
-          "unconnected_items|141510000|67715000|F.Cu|4|144333ef-eaf8-476f-b8cb-fa1d0a29f63e|bf795fda-26c9-4208-9eb8-56cf6b8de531",
+          "unconnected_items|141510000|67715000|F.Cu|4|144333ef-eaf8-476f-b8cb-fa1d0a29f63e|8749958d-22b8-4bc7-9726-b687d9363247",
           "split keyboard , gonna break both sides"
         ],
         [
-          "unconnected_items|256851500|56479255|F.Cu|4|c9a15a4f-06aa-4d3c-a3be-0d533e1f0f5b|0d02fca0-2430-4911-90d8-849f5664486c",
-          "fake issue"
-        ],
-        [
-          "unconnected_items|257863499|59644169|F.Cu|4|0d02fca0-2430-4911-90d8-849f5664486c|c9a15a4f-06aa-4d3c-a3be-0d533e1f0f5b",
+          "unconnected_items|257863499|59644169|F.Cu|4|c9a15a4f-06aa-4d3c-a3be-0d533e1f0f5b|0d02fca0-2430-4911-90d8-849f5664486c",
           "fake issue"
         ]
       ],
